@@ -28,7 +28,11 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
-		 
+		//Create a random Toy Room
+		int z = (int)(Math.random()*building.length);
+		int w = (int)(Math.random()*building.length);
+		building[z][w] = new Rooms.ToyRoom (z,w);
+
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
